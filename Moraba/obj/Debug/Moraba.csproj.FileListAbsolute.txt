@@ -1,0 +1,15 @@
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\App.g.cs
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba_MarkupCompile.cache
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.exe.config
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.exe
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.pdb
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\MainWindow.g.cs
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba_MarkupCompile.lref
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\MainWindow.baml
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.g.resources
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.Properties.Resources.resources
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.csproj.GenerateResource.cache
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.csproj.CoreCompileInputs.cache
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.exe
+C:\Users\Luke\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.pdb

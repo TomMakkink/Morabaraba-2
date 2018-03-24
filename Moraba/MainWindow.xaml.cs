@@ -26,6 +26,26 @@ namespace Moraba
         {
             InitializeComponent();
 
+            
+
+        }
+
+       
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Please enter player1 and player2 names in the provided boxs. Press finished once done.");
+            Player1Box.IsEnabled = true;
+            player2box.IsEnabled = true;
+         
+
+        }
+
+        private void finish_Click(object sender, RoutedEventArgs e)
+        {
+            Player player1 = new Player(Player1Box.Text, 1);
+            Player player2 = new Player(player2box.Text, 2);
+            MessageBox.Show(string.Format("Welcome to the war {0} and {1}", Player1Box.Text, player2box.Text));
         }
     }
 }
