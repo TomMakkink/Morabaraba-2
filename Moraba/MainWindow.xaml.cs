@@ -20,9 +20,12 @@ namespace Moraba
     /// </summary>
     public partial class MainWindow : Window
     {
+        static int turns = 0;
+        static List<Cow> millList = new List<Cow> { };
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
