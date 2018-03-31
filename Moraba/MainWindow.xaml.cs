@@ -23,6 +23,13 @@ namespace Moraba
         public MainWindow()
         {
             InitializeComponent();
+            greetings();
+        }
+
+        private void greetings()
+        {
+            string entryString = "Intro message goes here, and option to see rules, forfeit or beging the game.";
+            MessageBox.Show(entryString);
         }
     }
 }

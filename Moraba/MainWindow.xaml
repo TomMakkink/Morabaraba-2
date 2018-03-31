@@ -7,40 +7,49 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" Margin="179,173,0,0" VerticalAlignment="Top" Width="195"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="210" Margin="113,128,0,0" VerticalAlignment="Top" Width="329"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="419*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="707*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" Margin="184,164,0,0" VerticalAlignment="Top" Width="194"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="210" Margin="118,120,0,0" VerticalAlignment="Top" Width="328"/>
 
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="292" Margin="44,88,0,0" VerticalAlignment="Top" Width="458"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="292" Margin="48,80,0,0" VerticalAlignment="Top" Width="458"/>
 
-        <Canvas x:Name="battleGround" HorizontalAlignment="Left" Height="369" Margin="0,50,0,0" VerticalAlignment="Top" Width="792">
+        <Canvas x:Name="battleGround" HorizontalAlignment="Left" Height="368" Margin="4,42,0,0" VerticalAlignment="Top" Width="788" Grid.ColumnSpan="2">
             <Border BorderBrush="Black" BorderThickness="1" Height="369" Width="546"/>
-            <TextBox x:Name="textBox" Height="333" Canvas.Left="10" TextWrapping="Wrap" Text="0&#xD;&#xA;&#xD;&#xA;1 &#xD;&#xA;&#xD;&#xA;2 &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;4&#xD;&#xA;&#xD;&#xA;5&#xD;&#xA;&#xD;&#xA;6" Canvas.Top="26" Width="20" TextChanged="textBox_TextChanged" BorderThickness="0" FontSize="14.667"/>
+            <TextBox x:Name="textBox" Height="333" Canvas.Left="10" TextWrapping="Wrap" Text="0&#xD;&#xA;&#xD;&#xA;1 &#xD;&#xA;&#xD;&#xA;2 &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;4&#xD;&#xA;&#xD;&#xA;5&#xD;&#xA;&#xD;&#xA;6" Canvas.Top="26" Width="20" BorderThickness="0" FontSize="14.667"/>
         </Canvas>
-        <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="21" Margin="36,54,0,0" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F              G" VerticalAlignment="Top" Width="505" BorderThickness="0" FontSize="14.667" TextChanged="columnNames_TextChanged"/>
-        <Ellipse x:Name="b3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="105,219,0,0"/>
-        <Ellipse x:Name="g0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="492,80,0,0"/>
-        <Ellipse x:Name="d0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,80,0,0" RenderTransformOrigin="-0.458,0.708"/>
-        <Ellipse x:Name="a0_Copy" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,288,0,0"/>
-        <Ellipse x:Name="d5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,329,0,0"/>
-        <Ellipse x:Name="e3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="365,219,0,0"/>
-        <Ellipse x:Name="c3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="171,219,0,0"/>
-        <Ellipse x:Name="a0_Copy4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,165,0,0"/>
-        <Ellipse x:Name="d1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,120,0,0" RenderTransformOrigin="2.444,1.333"/>
-        <Ellipse x:Name="g3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="493,219,0,0"/>
-        <Ellipse x:Name="a3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="36,219,0,0"/>
-        <Ellipse x:Name="a0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="36,80,0,0"/>
-        <Ellipse x:Name="g6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="493,370,0,0"/>
-        <Ellipse x:Name="d6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="275,370,0,0"/>
-        <Ellipse x:Name="a6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="36,370,0,0"/>
-        <Ellipse x:Name="a0_Copy15" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="365,287,0,0"/>
-        <Ellipse x:Name="f5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="433,329,0,0"/>
-        <Ellipse x:Name="f3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="433,219,0,0"/>
-        <Ellipse x:Name="a0_Copy18" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="365,165,0,0"/>
-        <Ellipse x:Name="f1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="432,119,0,0"/>
-        <Ellipse x:Name="b5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="105,329,0,0"/>
-        <Ellipse x:Name="a0_Copy22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="170,288,0,0"/>
-        <Ellipse x:Name="a0_Copy23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="171,165,0,0"/>
-        <Ellipse x:Name="b1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="105,120,0,0"/>
+        <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" Margin="40,46,0,0" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F              G" VerticalAlignment="Top" Width="506" BorderThickness="0" FontSize="14.667"/>
+        <Ellipse x:Name="b3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,210,0,0"/>
+        <Ellipse x:Name="g0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="496,72,0,0"/>
+        <Ellipse x:Name="d0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,72,0,0" RenderTransformOrigin="-0.458,0.708"/>
+        <Ellipse x:Name="a0_Copy" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,280,0,0"/>
+        <Ellipse x:Name="d5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,320,0,0"/>
+        <Ellipse x:Name="e3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="370,210,0,0"/>
+        <Ellipse x:Name="c3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="176,210,0,0"/>
+        <Ellipse x:Name="a0_Copy4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,156,0,0"/>
+        <Ellipse x:Name="d1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,112,0,0" RenderTransformOrigin="2.444,1.333"/>
+        <Ellipse x:Name="g3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="498,210,0,0"/>
+        <Ellipse x:Name="a3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,210,0,0"/>
+        <Ellipse x:Name="a0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,72,0,0"/>
+        <Ellipse x:Name="g6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="498,362,0,0"/>
+        <Ellipse x:Name="d6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,362,0,0"/>
+        <Ellipse x:Name="a6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,362,0,0"/>
+        <Ellipse x:Name="a0_Copy15" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="370,278,0,0"/>
+        <Ellipse x:Name="f5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="438,320,0,0"/>
+        <Ellipse x:Name="f3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="438,210,0,0"/>
+        <Ellipse x:Name="a0_Copy18" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="370,156,0,0"/>
+        <Ellipse x:Name="f1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="436,110,0,0"/>
+        <Ellipse x:Name="b5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,320,0,0"/>
+        <Ellipse x:Name="a0_Copy22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="174,280,0,0"/>
+        <Ellipse x:Name="a0_Copy23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="176,156,0,0"/>
+        <Ellipse x:Name="b1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,112,0,0"/>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Height="100" Margin="230,51,0,-120" VerticalAlignment="Top" Grid.Row="1"/>
 
     </Grid>
 </Window>
