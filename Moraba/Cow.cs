@@ -9,7 +9,7 @@ namespace Moraba
     public class Cow
     {
         public string Name;
-        public string[] Position;
+        public string [] Position;
         public int Team;
 
         public Cow()
