@@ -23,13 +23,30 @@ namespace Moraba
         public MainWindow()
         {
             InitializeComponent();
-            greetings();
+            beginGame();
         }
 
-        private void greetings()
+        private void beginGame()
         {
-            string entryString = "Intro message goes here, and option to see rules, forfeit or beging the game.";
-            MessageBox.Show(entryString);
+            beginGameButton.Visibility = System.Windows.Visibility.Visible;
+            rulesButton.Visibility = System.Windows.Visibility.Visible;
+            quitGameButton.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void beginGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void quitGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Quite button clickek 
+            Application.Current.Shutdown();
+        }
+
+        private void rulesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Print the rules 
         }
     }
 }
