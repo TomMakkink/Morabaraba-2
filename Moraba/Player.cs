@@ -19,6 +19,7 @@ namespace Moraba
         public string Name; 
         public int Team;
         public PlayerState state;
+
         // default constructor
         public Player()
         {

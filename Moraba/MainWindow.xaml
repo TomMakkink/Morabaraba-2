@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Moraba"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,-21">
         <Grid.RowDefinitions>
             <RowDefinition Height="419*"/>
             <RowDefinition Height="31*"/>
@@ -16,23 +16,9 @@
             <ColumnDefinition Width="422*"/>
             <ColumnDefinition Width="85*"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" Margin="184,164,0,0" VerticalAlignment="Top" Width="194" Grid.ColumnSpan="2"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="210" Margin="118,120,0,0" VerticalAlignment="Top" Width="328" Grid.ColumnSpan="2"/>
-
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="292" Margin="48,80,0,0" VerticalAlignment="Top" Width="458" Grid.ColumnSpan="2"/>
-
         <Canvas x:Name="battleGround" HorizontalAlignment="Left" Height="368" Margin="4,42,0,0" VerticalAlignment="Top" Width="788" Grid.ColumnSpan="3" Grid.RowSpan="2">
-            <Border BorderBrush="Black" BorderThickness="1" Height="369" Width="546">
-                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Margin="36,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="151" RenderTransformOrigin="0.5,0.5">
-                    <Rectangle.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="32.045"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Rectangle.RenderTransform>
-                </Rectangle>
+            <Border BorderBrush="Black" BorderThickness="1" Height="368" Width="546">
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="359" Margin="9,32,0,-24" TextWrapping="Wrap" Text="0&#xD;&#xA;&#xD;&#xA;1&#xD;&#xA;&#xD;&#xA;2&#xD;&#xA;&#xD;&#xA;3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;4&#xD;&#xA;&#xD;&#xA;5&#xD;&#xA;&#xD;&#xA;6&#xD;&#xA;" VerticalAlignment="Top" Width="25" FontSize="16" BorderThickness="0"/>
             </Border>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Canvas.Left="366" Canvas.Top="283">
                 <Rectangle.RenderTransform>
@@ -45,7 +31,7 @@
                 </Rectangle.RenderTransform>
             </Rectangle>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" Canvas.Left="380" Canvas.Top="174"/>
-            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" Canvas.Left="53" Canvas.Top="174"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.5,0.5" Canvas.Left="53" Canvas.Top="174"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.5,0.5" Canvas.Left="368" Canvas.Top="77">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
@@ -152,39 +138,34 @@
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="445" RenderTransformOrigin="0.5,0.5" Canvas.Left="53" Canvas.Top="37"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="119"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="242"/>
+            <Ellipse x:Name="a0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="30"/>
+            <Ellipse x:Name="a3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="168"/>
+            <Ellipse x:Name="a6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="318"/>
+            <Ellipse x:Name="b1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="106" Canvas.Top="72"/>
+            <Ellipse x:Name="b3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="-0.056,-2.083" Canvas.Left="106" Canvas.Top="168"/>
+            <Ellipse x:Name="b5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="106" Canvas.Top="274"/>
+            <Ellipse x:Name="c2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="113"/>
+            <Ellipse x:Name="c3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="168"/>
+            <Ellipse x:Name="c4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="234"/>
+            <Ellipse x:Name="d0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="-0.458,0.708" Grid.ColumnSpan="2" Canvas.Left="276" Canvas.Top="30"/>
+            <Ellipse x:Name="d1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Grid.Column="1" Canvas.Left="276" Canvas.Top="72"/>
+            <Ellipse x:Name="d2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Canvas.Left="276" Canvas.Top="113"/>
+            <Ellipse x:Name="d4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Canvas.Left="276" Canvas.Top="236"/>
+            <Ellipse x:Name="d5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.ColumnSpan="2" RenderTransformOrigin="0.472,0.611" Canvas.Left="276" Canvas.Top="276"/>
+            <Ellipse x:Name="d6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.ColumnSpan="2" Canvas.Left="276" Canvas.Top="320"/>
+            <Ellipse x:Name="e2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="366" Canvas.Top="113"/>
+            <Ellipse x:Name="e3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="366" Canvas.Top="168"/>
+            <Ellipse x:Name="e4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="366" Canvas.Top="236"/>
+            <Ellipse x:Name="f1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="72"/>
+            <Ellipse x:Name="f3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="168"/>
+            <Ellipse x:Name="f5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="276"/>
+            <Ellipse x:Name="g0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="32"/>
+            <Ellipse x:Name="g3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="168"/>
+            <Ellipse x:Name="g6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="318"/>
+            <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F            G" VerticalAlignment="Top" Width="489" BorderThickness="0" FontSize="14.667" Grid.ColumnSpan="2" Canvas.Left="40" Canvas.Top="10"/>
         </Canvas>
-        <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" Margin="40,10,0,0" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F              G" VerticalAlignment="Top" Width="506" BorderThickness="0" FontSize="14.667" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="b3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,210,0,0"/>
-        <Ellipse x:Name="g0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="210.5,72,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="d0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,72,0,0" RenderTransformOrigin="-0.458,0.708" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="a0_Copy" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,280,0,0" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="e3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="84.5,210,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="c3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="176,210,0,0"/>
-        <Ellipse x:Name="a0_Copy4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,156,0,0" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="d1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,114,0,0" RenderTransformOrigin="2.444,1.333" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="g3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="212.5,210,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="a3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,210,0,0"/>
-        <Ellipse x:Name="a0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,72,0,0"/>
-        <Ellipse x:Name="g6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="212.5,362,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="d6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,362,0,0" Grid.ColumnSpan="2"/>
-        <Ellipse x:Name="a6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="40,362,0,0"/>
-        <Ellipse x:Name="a0_Copy15" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="84.5,278,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="f5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="150.5,318,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="f3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="150.5,210,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="a0_Copy18" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="84.5,156,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="f1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="150.5,114,0,0" Grid.Column="1"/>
-        <Ellipse x:Name="b5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,316,0,0"/>
-        <Ellipse x:Name="a0_Copy22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="176,278,0,0"/>
-        <Ellipse x:Name="a0_Copy23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="176,156,0,0"/>
-        <Ellipse x:Name="b1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="110,116,0,0"/>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Height="100" Margin="230,51,0,-122" VerticalAlignment="Top" Grid.Row="1"/>
-        <Canvas x:Name="battleGround_Copy" HorizontalAlignment="Left" Height="368" Margin="4,42,0,0" VerticalAlignment="Top" Width="788" Grid.ColumnSpan="3" Grid.RowSpan="2">
-            <TextBox x:Name="textBox1" Height="333" Canvas.Left="-55" TextWrapping="Wrap" Text="0&#xA;&#xA;1 &#xA;&#xA;2 &#xA;&#xA;&#xA;3&#xA;&#xA;&#xA;&#xA;4&#xA;&#xA;5&#xA;&#xA;6" Canvas.Top="26" Width="20" BorderThickness="0" FontSize="14.667"/>
-            <Button x:Name="rulesButton" Content="Rules" Height="31" Canvas.Left="294" Canvas.Top="328" Width="235" Visibility="Hidden" Click="rulesButton_Click"/>
-            <Button x:Name="beginGameButton" Content="Begin Game" Height="31" Canvas.Left="24" Canvas.Top="327" Width="222" Click="beginGameButton_Click" Visibility="Hidden"/>
-        </Canvas>
-        <Ellipse x:Name="d5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Margin="280,316,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="quitGameButton" Content="Quit" HorizontalAlignment="Left" Height="30" Margin="276,370,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2" Grid.Column="1" Click="quitGameButton_Click" Visibility="Hidden"/>
-
+        <Button x:Name="rulesButton" Content="Rules" Visibility="Visible" Click="rulesButton_Click" Grid.Column="1" Margin="290,308,10,72" Grid.ColumnSpan="2"/>
+        <Button x:Name="beginGameButton" Content="Begin Game"  Click="beginGameButton_Click" Visibility="Visible" Margin="289,258,10,122" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="quitGameButton" Content="Quit" HorizontalAlignment="Left" Height="30" Margin="290,361,0,0" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2" Grid.Column="1" Click="quitGameButton_Click" Visibility="Visible"/>
     </Grid>
 </Window>
