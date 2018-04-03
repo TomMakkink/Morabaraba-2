@@ -79,11 +79,46 @@ namespace Moraba
             
         }
 
-
-
-        void checkMills ()
+        /// <summary>
+        /// This method can only return the possible mills that can be made from the avalibale node.
+        /// </summary>
+        /// <param name="currentNode"></param>
+        /// <returns></returns>
+        public List<List<string>> getMillOptions(Node currentNode)
         {
-           // this will be where mills will be checked and added to a new mills list.
+            return new List<List<string>>{ };
+        }
+
+
+        /// <summary>
+        /// This method checks to see if the given mill can be fromed or not.
+        /// </summary>
+        /// <param name="millOptions"></param>
+        /// <returns></returns>
+        public bool checkTrue(List<string> millOptions)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// This method will return the number of mills formed if any.
+        /// </summary>
+        /// <param name="currentNode"></param>
+        /// <returns></returns>
+        int checkMills (Node currentNode)
+        {
+            List<List<string>> millOptions = getMillOptions(currentNode); // this will return all the mills that can be made from this node.
+            int numMills = 0; // number of actual mills formed this is the value that is returned.
+            for (int i = 0; i<millOptions.Count;i++) // this just goes through all the options given and either adds to the numMills and millList or does nothing.
+            {
+                bool answer = checkTrue(millOptions[i]); // this will check whether this mill can be formed or not.
+                if (answer) 
+                {
+                    numMills++; // adds a +1 to the number of mills that are formed from this one node.
+                    millList.Add(millOptions[i]); // just adds the new mill to the millList.
+                }
+            }
+            return numMills;
         }
     }
 }
