@@ -24,6 +24,8 @@ namespace Moraba
         int turns = 0;
         Player player1 = new Player();
         Player player2 = new Player();
+        List<Node> mainNode = new List<Node> { };
+        List<List<string>> millList = new List<List<string>> { };
 
         public MainWindow()
         {
@@ -62,6 +64,11 @@ namespace Moraba
         private void rulesButton_Click(object sender, RoutedEventArgs e)
         {
             // Print the rules 
+        }
+
+        void checkMills ()
+        {
+           // this will be where mills will be checked and added to a new mills list.
         }
     }
 }
