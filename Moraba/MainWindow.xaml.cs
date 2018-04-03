@@ -69,7 +69,8 @@ namespace Moraba
         private bool isNameTrue (string buttonName, string[] pos)
         {
             string NodeName = string.Format("{0}{1}", pos[0], pos[1]);
-            if (buttonName.CompareTo(NodeName)==0)
+
+            if ((buttonName.ToLower()).CompareTo(NodeName.ToLower())==0)
             {
                 return true;
             }
