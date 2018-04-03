@@ -84,8 +84,9 @@ namespace Moraba
         /// </summary>
         /// <param name="currentNode"></param>
         /// <returns></returns>
-        public List<List<string>> getMillOptions(Node currentNode)
+        private List<List<string>> getMillOptions(Node currentNode)
         {
+            string[] name = currentNode.position;
             return new List<List<string>>{ };
         }
 
@@ -95,7 +96,7 @@ namespace Moraba
         /// </summary>
         /// <param name="millOptions"></param>
         /// <returns></returns>
-        public bool checkTrue(List<string> millOptions)
+        private bool checkTrue(List<string> millOptions)
         {
             return false;
         }
@@ -105,7 +106,7 @@ namespace Moraba
         /// </summary>
         /// <param name="currentNode"></param>
         /// <returns></returns>
-        int checkMills (Node currentNode)
+        private int checkMills (Node currentNode)
         {
             List<List<string>> millOptions = getMillOptions(currentNode); // this will return all the mills that can be made from this node.
             int numMills = 0; // number of actual mills formed this is the value that is returned.
