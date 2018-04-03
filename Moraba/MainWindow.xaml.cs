@@ -49,7 +49,7 @@ namespace Moraba
             quitGameButton.Visibility = System.Windows.Visibility.Hidden;
 
             // Each username from each player 
-            
+
 
             //player1.Name = 
 
@@ -65,6 +65,20 @@ namespace Moraba
         {
             // Print the rules 
         }
+
+        private bool isNameTrue (string buttonName, string[] pos)
+        {
+            string NodeName = string.Format("{0}{1}", pos[0], pos[1]);
+            if (buttonName.CompareTo(NodeName)==0)
+            {
+                return true;
+            }
+            return false;
+
+            
+        }
+
+
 
         void checkMills ()
         {
