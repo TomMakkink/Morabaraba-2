@@ -27,3 +27,17 @@ C:\Users\Luke\Desktop\moraba\Moraba\obj\Debug\Moraba.csproj.GenerateResource.cac
 C:\Users\Luke\Desktop\moraba\Moraba\obj\Debug\Moraba.csproj.CoreCompileInputs.cache
 C:\Users\Luke\Desktop\moraba\Moraba\obj\Debug\Moraba.exe
 C:\Users\Luke\Desktop\moraba\Moraba\obj\Debug\Moraba.pdb
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.exe.config
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.exe
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.pdb
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.exe
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\bin\Debug\Moraba.pdb
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.csprojResolveAssemblyReference.cache
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\MainWindow.g.cs
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\App.g.cs
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba_MarkupCompile.cache
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba_MarkupCompile.lref
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\MainWindow.baml
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.g.resources
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.Properties.Resources.resources
+C:\Users\tomlap\Desktop\Morabaraba-2\Moraba\obj\Debug\Moraba.csproj.GenerateResource.Cache

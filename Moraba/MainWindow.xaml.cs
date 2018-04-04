@@ -66,17 +66,17 @@ namespace Moraba
             // Print the rules 
         }
 
-        private bool isNameTrue (string buttonName, string[] pos)
+        private bool isNameTrue(string buttonName, string[] pos)
         {
             string NodeName = string.Format("{0}{1}", pos[0], pos[1]);
 
-            if ((buttonName.ToLower()).CompareTo(NodeName.ToLower())==0)
+            if ((buttonName.ToLower()).CompareTo(NodeName.ToLower()) == 0)
             {
                 return true;
             }
             return false;
 
-            
+
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Moraba
         private List<List<string>> getMillOptions(Node currentNode)
         {
             string[] name = currentNode.position;
-            return new List<List<string>>{ };
+            return new List<List<string>> { };
         }
 
 
@@ -106,20 +106,140 @@ namespace Moraba
         /// </summary>
         /// <param name="currentNode"></param>
         /// <returns></returns>
-        private int checkMills (Node currentNode)
+        private int checkMills(Node currentNode)
         {
             List<List<string>> millOptions = getMillOptions(currentNode); // this will return all the mills that can be made from this node.
             int numMills = 0; // number of actual mills formed this is the value that is returned.
-            for (int i = 0; i<millOptions.Count;i++) // this just goes through all the options given and either adds to the numMills and millList or does nothing.
+            for (int i = 0; i < millOptions.Count; i++) // this just goes through all the options given and either adds to the numMills and millList or does nothing.
             {
                 bool answer = checkTrue(millOptions[i]); // this will check whether this mill can be formed or not.
-                if (answer) 
+                if (answer)
                 {
                     numMills++; // adds a +1 to the number of mills that are formed from this one node.
                     millList.Add(millOptions[i]); // just adds the new mill to the millList.
                 }
             }
             return numMills;
+        }
+
+        private void a0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void a3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void a6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void b1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void b3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void b5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void c2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void c3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void c4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void d6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void e2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void e3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void e4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void f1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void f3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void f5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void g0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void g3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void g6_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
