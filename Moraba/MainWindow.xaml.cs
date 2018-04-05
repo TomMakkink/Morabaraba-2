@@ -21,12 +21,15 @@ namespace Moraba
     public partial class MainWindow : Window
     {
         // Global Variables 
+        
         int turns = 1;
         Player player1 = new Player();
         Player player2 = new Player();
         List<Node> mainNode = new List<Node> { };
         List<List<string>> millList = new List<List<string>> { };
-        
+        bool isStartNode = true;
+        Cow tempCow = new Cow();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -137,12 +140,43 @@ namespace Moraba
             {
                 mainNode[index].cow = new Cow(mainNode[index].position, player.Team);
                 mainNode[index].occupied = true;
-                if (player.Team == 1) but.Background = Brushes.BurlyWood;
-                else but.Background = Brushes.DarkSalmon;
+                changeButtonColour(player,but);
                 turns++;
             }
 
         }
+
+        private void changeButtonColour(Player player, Button but)
+        {
+            if (player.Team == 1) but.Background = Brushes.BurlyWood;
+            else but.Background = Brushes.DarkSalmon;
+        }
+
+
+        private void moveCow(Player player, int index, Button but)
+        {
+            if (isStartNode==true)
+            {
+                if (mainNode[index].occupied && (mainNode[index].cow.Team == player.Team))
+                {
+                    tempCow = mainNode[index].cow;
+                    mainNode[index].occupied = false;
+                    isStartNode = false;
+                    but.Background = Brushes.WhiteSmoke;
+                }
+                else
+                {
+                    MessageBox.Show("Please choose a valid node i.e.  an occupied node that is not your enemies.");
+                }
+            }
+            //else
+            //{
+            //    if (mainNode[index].position != tempCow.Position)
+                    
+            //}
+        }
+
+
 
         private void movePlayer(int index, Button but)
         {
@@ -154,7 +188,7 @@ namespace Moraba
                 }
                 else
                 {
-                    
+                    moveCow(player2, index, but);
                 }
             }
             else
@@ -162,6 +196,10 @@ namespace Moraba
                 if (turns < 25)
                 {
                     placeCow(player1, index, but);
+                }
+                else
+                {
+                    moveCow(player2, index, but);
                 }
             }
         }
