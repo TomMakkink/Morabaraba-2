@@ -29,11 +29,11 @@ namespace Moraba
             cow = newCow;
         }
 
-        public Node(string pos, string[] friendNode)
+        public Node(string pos)
         {
             position = pos;
             occupied = false;
-            neighbours = friendNode;
+            neighbours = new string[4];
             cow = new Cow();
         }
 

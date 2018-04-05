@@ -21,7 +21,7 @@ namespace Moraba
     public partial class MainWindow : Window
     {
         // Global Variables 
-        
+
         int turns = 1;
         Player player1 = new Player();
         Player player2 = new Player();
@@ -56,7 +56,10 @@ namespace Moraba
             // Initialize mainNode list 
             initNodeList();
 
+
         }
+
+
 
         private void quitGameButton_Click(object sender, RoutedEventArgs e)
         {
@@ -71,7 +74,32 @@ namespace Moraba
 
         private void initNodeList()
         {
-            mainNode.Add(new Node());
+            // node (position, neighbours)
+            mainNode[0] = new Node("a0", new List<string> { "a3", "d0", "b1" });
+            mainNode[1] = new Node("a3", new List<string> {"a0", "b3", "a6"});
+            mainNode[2] = new Node("a6", new List<string> { "a3", "d6", "b5"});
+            mainNode[3] = new Node("b1", new List<string> { "a0", "c2", "d1", "b3"});
+            mainNode[4] = new Node("b3", new List<string> { "a3", "c3", "b1", "b5"});
+            mainNode[5] = new Node("b5", new List<string> { "a6", "c4", "b3", "d5"});
+            mainNode[6] = new Node("c2", new List<string> { "b1", "c3", "d2"});
+            mainNode[7] = new Node("c3", new List<string> { "c2", "c4", "b3"});
+            mainNode[8] = new Node("c4", new List<string> { "c3", "b5", "d4"});
+            mainNode[9] = new Node("d0", new List<string> { "d1", "a0", "g0"});
+            mainNode[10] = new Node("d1", new List<string> { "d0", "b1", "d2", "f1"});
+            mainNode[11] = new Node("d2", new List<string> { "d1", "c2", "e2"});
+            mainNode[12] = new Node("d4", new List<string> { "d5", "c4", "e4"});
+            mainNode[13] = new Node("d5", new List<string> { "d4", "d6", "b5", "f5"});
+            mainNode[14] = new Node("d6", new List<string> { "d5", "a6", "g6"});
+            mainNode[15] = new Node("e2", new List<string> { "f1", "e3", "d2"});
+            mainNode[16] = new Node("e3", new List<string> { "e2", "e4", "f3"});
+            mainNode[17] = new Node("e4", new List<string> { "e3", "f5", "d4"});
+            mainNode[18] = new Node("f1", new List<string> { "d1", "f3", "e2", "g0"});
+            mainNode[19] = new Node("f3", new List<string> { "f1", "e3", "g3", "f5"});
+            mainNode[20] = new Node("f5", new List<string> { "g6", "d5", "e4"});
+            mainNode[21] = new Node("g0", new List<string> { "g3", "f1", "d0"});
+            mainNode[22] = new Node("g3", new List<string> { "g0", "g6", "f3"});
+            mainNode[23] = new Node("g6", new List<string> { "g3", "f5", "d6"});
+
         }
 
         private bool isNameTrue(string buttonName, string[] pos)
