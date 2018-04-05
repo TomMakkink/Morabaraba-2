@@ -130,7 +130,7 @@ namespace Moraba
         private void placeCow(Player player, int index)
         {
             //Cow(string name, string row, string col, int team)
-            //mainNode[index].cow = new Cow ()
+            mainNode[index].cow = new Cow(mainNode[index].position, player.Team);
         }
 
         private void playerCheck(int index)

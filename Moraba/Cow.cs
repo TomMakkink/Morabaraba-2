@@ -8,21 +8,18 @@ namespace Moraba
 {
     public class Cow
     {
-        public string Name;
-        public string [] Position;
+        public string Position;
         public int Team;
 
         public Cow()
         {
-            Name = "NoNameBrand";
-            Position = new string[] { "A", "0" };
+            Position = "a0";
             Team = 0;
         }
 
-        public Cow(string name, string row, string col, int team)
+        public Cow(string pos, int team)
         {
-            Name = name;
-            Position = new string[] { row, col };
+            Position = pos;
             Team = team;
         }
     }
