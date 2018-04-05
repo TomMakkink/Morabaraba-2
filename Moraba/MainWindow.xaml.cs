@@ -153,6 +153,20 @@ namespace Moraba
         }
 
 
+        private bool checkIsFlying (Player player)
+        {
+            int totalCowz = 0;
+            foreach (Node x in mainNode)
+            {
+                if (x.cow.Team == player.Team)
+                    totalCowz++;
+            }
+            if (totalCowz > 3)
+                return false;
+            else
+                return true;
+        }
+
         private void moveCow(Player player, int index, Button but)
         {
             if (isStartNode==true)
@@ -169,11 +183,17 @@ namespace Moraba
                     MessageBox.Show("Please choose a valid node i.e.  an occupied node that is not your enemies.");
                 }
             }
-            //else
-            //{
-            //    if (mainNode[index].position != tempCow.Position)
-                    
-            //}
+            else
+            {
+                if (mainNode[index].position != tempCow.Position && (mainNode[index].occupied == false))
+                {
+                    if (checkIsFlying(player))
+                    {
+
+                    }
+                }
+
+            }
         }
 
 
