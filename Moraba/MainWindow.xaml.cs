@@ -167,53 +167,62 @@ namespace Moraba
                 return true;
         }
 
+        private void moveCow2NewPos (Player player,int index, Button but)
+        {
+            mainNode[index].cow = tempCow;
+            mainNode[index].cow.Position = mainNode[index].position;
+            mainNode[index].occupied = true;
+            turns++;
+            isStartNode = true;
+            changeButtonColour(player, but);
+        }
+
+        private void startingCow (Player player, int index, Button but)
+        {
+            if (mainNode[index].occupied && (mainNode[index].cow.Team == player.Team))
+            {
+                tempCow = mainNode[index].cow;
+                mainNode[index].occupied = false;
+                isStartNode = false;
+                but.Background = Brushes.WhiteSmoke;
+            }
+            else
+            {
+                MessageBox.Show("Please choose a valid node i.e.  an occupied node that is not your enemies.");
+            }
+        }
+
+        private void finsihingCow (Player player, int index, Button but)
+        {
+            if (mainNode[index].position != tempCow.Position && (mainNode[index].occupied == false))
+            {
+                if (checkIsFlying(player))
+                {
+                    moveCow2NewPos(player, index, but);
+                }
+                else
+                {
+                    if (mainNode[index].neighbours.Contains(tempCow.Position))
+                    {
+                        moveCow2NewPos(player, index, but);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please choose an unoccupied node");
+                    }
+                }
+            }
+        }
+
         private void moveCow(Player player, int index, Button but)
         {
             if (isStartNode==true)
             {
-                if (mainNode[index].occupied && (mainNode[index].cow.Team == player.Team))
-                {
-                    tempCow = mainNode[index].cow;
-                    mainNode[index].occupied = false;
-                    isStartNode = false;
-                    but.Background = Brushes.WhiteSmoke;
-                }
-                else
-                {
-                    MessageBox.Show("Please choose a valid node i.e.  an occupied node that is not your enemies.");
-                }
+                startingCow(player, index, but);
             }
             else
             {
-                if (mainNode[index].position != tempCow.Position && (mainNode[index].occupied == false))
-                {
-                    if (checkIsFlying(player))
-                    {
-                        mainNode[index].cow = tempCow;
-                        mainNode[index].cow.Position = mainNode[index].position;
-                        mainNode[index].occupied = true;
-                        turns++;
-                        isStartNode = true;
-                        changeButtonColour(player, but);
-                    }
-                    else
-                    {
-                        if (mainNode[index].neighbours.Contains(tempCow.Position))
-                        {
-                            mainNode[index].cow = tempCow;
-                            mainNode[index].cow.Position = mainNode[index].position;
-                            mainNode[index].occupied = true;
-                            turns++;
-                            isStartNode = true;
-                            changeButtonColour(player, but);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please choose an unoccupied node");
-                        }
-                    }
-                }
-
+                finsihingCow(player, index, but);
             }
         }
 
