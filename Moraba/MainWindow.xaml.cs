@@ -48,10 +48,10 @@ namespace Moraba
             rulesButton.Visibility = System.Windows.Visibility.Hidden;
             quitGameButton.Visibility = System.Windows.Visibility.Hidden;
 
-            // Each username from each player 
+            battleGround.Visibility = System.Windows.Visibility.Visible;
 
-
-            //player1.Name = 
+            // Initialize mainNode list 
+            initNodeList();
 
         }
 
@@ -64,6 +64,11 @@ namespace Moraba
         private void rulesButton_Click(object sender, RoutedEventArgs e)
         {
             // Print the rules 
+        }
+
+        private void initNodeList()
+        {
+
         }
 
         private bool isNameTrue(string buttonName, string[] pos)
@@ -122,9 +127,35 @@ namespace Moraba
             return numMills;
         }
 
+        private void placeCow(Player player, int index)
+        {
+            //Cow(string name, string row, string col, int team)
+            //mainNode[index].cow = new Cow ()
+        }
+
+        private void playerCheck(int index)
+        {
+            if (turns % 2 == 0)
+            {
+                if (turns < 25)
+                {
+                    placeCow(player2, index);
+                }
+            }
+            else
+            {
+                if (turns < 25)
+                {
+                    placeCow(player1, index);
+                }
+            }
+        }
+
+
         private void a0_Click(object sender, RoutedEventArgs e)
         {
 
+            playerCheck(0);
         }
 
         private void a3_Click(object sender, RoutedEventArgs e)

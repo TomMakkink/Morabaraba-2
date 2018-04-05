@@ -138,174 +138,30 @@
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="445" RenderTransformOrigin="0.5,0.5" Canvas.Left="53" Canvas.Top="37"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="119"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="242"/>
-            <Button x:Name="a0" Canvas.Left="36" Canvas.Top="32" Click="a0_Click">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="a0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="30"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="a3" Canvas.Left="36" Canvas.Top="168" Click="a3_Click" RenderTransformOrigin="0.722,2.056">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="a3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="a6" Canvas.Left="37" Canvas.Top="318" Click="a6_Click" RenderTransformOrigin="0.722,2.056">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="a6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="36" Canvas.Top="318"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="b1" Canvas.Left="106" Canvas.Top="72" Click="b1_Click" RenderTransformOrigin="0.722,2.056">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="b1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="106" Canvas.Top="72"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="b3" Canvas.Left="106" Canvas.Top="168" Click="b3_Click" RenderTransformOrigin="0.722,2.056">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="b3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="-0.056,-2.083" Canvas.Left="106" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="b5" Canvas.Left="106" Canvas.Top="276" Click="b5_Click" RenderTransformOrigin="0.722,2.056">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="b5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="106" Canvas.Top="274"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="c2" Canvas.Left="173" Canvas.Top="113" Click="c2_Click" RenderTransformOrigin="0.722,2.056" Background="#FFA02D2D">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="c2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="113"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="c3" Canvas.Left="173" Canvas.Top="168" Click="c3_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="c3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="c4" Canvas.Left="173" Canvas.Top="236" Click="c4_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="c4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="173" Canvas.Top="234"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d0" Canvas.Left="276" Canvas.Top="32" Click="d0_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="-0.458,0.708" Grid.ColumnSpan="2" Canvas.Left="276" Canvas.Top="30"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d1" Canvas.Left="276" Canvas.Top="72" Click="d1_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Grid.Column="1" Canvas.Left="276" Canvas.Top="72"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d2" Canvas.Left="276" Canvas.Top="113" Click="d2_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Canvas.Left="276" Canvas.Top="113"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d4" Canvas.Left="276" Canvas.Top="236" Click="d4_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" RenderTransformOrigin="2.444,1.333" Canvas.Left="276" Canvas.Top="236"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d5" Canvas.Left="276" Canvas.Top="276" Click="d5_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.ColumnSpan="2" RenderTransformOrigin="0.472,0.611" Canvas.Left="276" Canvas.Top="276"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="d6" Canvas.Left="276" Canvas.Top="318" Click="d6_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="d6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.ColumnSpan="2" Canvas.Left="276" Canvas.Top="320"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="e2" Canvas.Left="366" Canvas.Top="113" Click="e2_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="e2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="366" Canvas.Top="113"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="e3" Canvas.Left="366" Canvas.Top="168" Click="e3_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="e3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="366" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="e4" Canvas.Left="366" Canvas.Top="236" Click="e4_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="e4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Canvas.Left="366" Canvas.Top="236"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="f1" Canvas.Left="432" Canvas.Top="72" Click="f1_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="f1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="72"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="f3" Canvas.Left="432" Canvas.Top="168" Click="f3_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="f3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="f5" Canvas.Left="432" Canvas.Top="276" Click="f5_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="f5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="432" Canvas.Top="276"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="g0" Canvas.Left="490" Canvas.Top="32" Click="g0_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="g0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="32"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="g3" Canvas.Left="490" Canvas.Top="168" Click="g3_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="g3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="168"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="g6" Canvas.Left="490" Canvas.Top="318" Click="g6_Click" RenderTransformOrigin="0.722,2.056" Background="Red">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Ellipse x:Name="g6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="18" Stroke="Black" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="490" Canvas.Top="318"/>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button x:Name="a0" Canvas.Left="36" Canvas.Top="32" Click="a0_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="a3" Canvas.Left="36" Canvas.Top="168" Click="a3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="a6" Canvas.Left="37" Canvas.Top="318" Click="a6_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="b1" Canvas.Left="106" Canvas.Top="72" Click="b1_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="b3" Canvas.Left="106" Canvas.Top="168" Click="b3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="b5" Canvas.Left="106" Canvas.Top="276" Click="b5_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="c2" Canvas.Left="173" Canvas.Top="113" Click="c2_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="c3" Canvas.Left="173" Canvas.Top="168" Click="c3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="c4" Canvas.Left="173" Canvas.Top="236" Click="c4_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="d0" Canvas.Left="276" Canvas.Top="32" Click="d0_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="d1" Canvas.Left="276" Canvas.Top="72" Click="d1_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="d2" Canvas.Left="276" Canvas.Top="113" Click="d2_Click" Height="18" Width="19" Background="White"></Button>
+                <Button x:Name="d4" Canvas.Left="276" Canvas.Top="236" Click="d4_Click" Height="18" Width="19" Background="White"></Button>
+                <Button x:Name="d5" Canvas.Left="276" Canvas.Top="276" Click="d5_Click" Height="18" Width="19" Background="White"></Button>
+                <Button x:Name="d6" Canvas.Left="276" Canvas.Top="318" Click="d6_Click" Height="18" Width="19" Background="White"></Button>
+                <Button x:Name="e2" Canvas.Left="366" Canvas.Top="113" Click="e2_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="e3" Canvas.Left="366" Canvas.Top="168" Click="e3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="e4" Canvas.Left="366" Canvas.Top="236" Click="e4_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="f1" Canvas.Left="432" Canvas.Top="72" Click="f1_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="f3" Canvas.Left="432" Canvas.Top="168" Click="f3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="f5" Canvas.Left="432" Canvas.Top="276" Click="f5_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="g0" Canvas.Left="490" Canvas.Top="32" Click="g0_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="g3" Canvas.Left="490" Canvas.Top="168" Click="g3_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="g6" Canvas.Left="490" Canvas.Top="318" Click="g6_Click" Height="18" Width="19" Background="White"></Button>
             <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F            G" VerticalAlignment="Top" Width="489" BorderThickness="0" FontSize="14.667" Grid.ColumnSpan="2" Canvas.Left="40" Canvas.Top="10"/>
         </Canvas>
         <Button x:Name="rulesButton" Content="Rules" Visibility="Visible" Click="rulesButton_Click" Grid.Column="1" Margin="290,308,10,72" Grid.ColumnSpan="2"/>
