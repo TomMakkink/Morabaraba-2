@@ -21,12 +21,12 @@ namespace Moraba
     public partial class MainWindow : Window
     {
         // Global Variables 
-        int turns = 2;
+        int turns = 1;
         Player player1 = new Player();
         Player player2 = new Player();
         List<Node> mainNode = new List<Node> { };
         List<List<string>> millList = new List<List<string>> { };
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -127,26 +127,34 @@ namespace Moraba
             return numMills;
         }
 
+
+
+
         private void placeCow(Player player, int index, Button but)
         {
-            //Cow(string name, string row, string col, int team)
-            //if (validatePlaceInput())
-            //{
+            //Cow(string name, string row, string col, int team);
+            if (mainNode[index].occupied == false)
+            {
                 mainNode[index].cow = new Cow(mainNode[index].position, player.Team);
+                mainNode[index].occupied = true;
                 if (player.Team == 1) but.Background = Brushes.BurlyWood;
-                else but.Background = Brushes.DarkOrchid;
+                else but.Background = Brushes.DarkSalmon;
                 turns++;
-            //}
-            
+            }
+
         }
 
-        private void playerCheck(int index, Button but)
+        private void movePlayer(int index, Button but)
         {
             if (turns % 2 == 0)
             {
                 if (turns < 25)
                 {
                     placeCow(player2, index, but);
+                }
+                else
+                {
+                    
                 }
             }
             else
@@ -161,123 +169,122 @@ namespace Moraba
 
         private void a0_Click(object sender, RoutedEventArgs e)
         {
-
-            playerCheck(0, this.a0);
+            movePlayer(0, this.a0);
         }
 
         private void a3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(1, this.a3);
         }
 
         private void a6_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(2, this.a6);
         }
 
         private void b1_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(3, this.b1);
         }
 
         private void b3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(4, this.b3);
         }
 
         private void b5_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(5, this.b5);
         }
 
         private void c2_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(6, this.c2);
         }
 
         private void c3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(7, this.c3);
         }
 
         private void c4_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(8, this.c4);
         }
 
         private void d0_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(9, this.d0);
         }
 
         private void d1_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(10, this.d1);
         }
 
         private void d2_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(11, this.d2);
         }
 
         private void d4_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(12, this.d4);
         }
 
         private void d5_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(13, this.d5);
         }
 
         private void d6_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(14, this.d6);
         }
 
         private void e2_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(15, this.e2);
         }
 
         private void e3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(16, this.e3);
         }
 
         private void e4_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(17, this.e4);
         }
 
         private void f1_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(18, this.f1);
         }
 
         private void f3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(19, this.f3);
         }
 
         private void f5_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(20, this.f5);
         }
 
         private void g0_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(21, this.g0);
         }
 
         private void g3_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(22, this.g3);
         }
 
         private void g6_Click(object sender, RoutedEventArgs e)
         {
-
+            movePlayer(23, this.g6);
         }
     }
 }
