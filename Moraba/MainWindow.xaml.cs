@@ -189,7 +189,28 @@ namespace Moraba
                 {
                     if (checkIsFlying(player))
                     {
-
+                        mainNode[index].cow = tempCow;
+                        mainNode[index].cow.Position = mainNode[index].position;
+                        mainNode[index].occupied = true;
+                        turns++;
+                        isStartNode = true;
+                        changeButtonColour(player, but);
+                    }
+                    else
+                    {
+                        if (mainNode[index].neighbours.Contains(tempCow.Position))
+                        {
+                            mainNode[index].cow = tempCow;
+                            mainNode[index].cow.Position = mainNode[index].position;
+                            mainNode[index].occupied = true;
+                            turns++;
+                            isStartNode = true;
+                            changeButtonColour(player, but);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please choose an unoccupied node");
+                        }
                     }
                 }
 
