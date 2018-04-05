@@ -21,7 +21,7 @@ namespace Moraba
     public partial class MainWindow : Window
     {
         // Global Variables 
-        int turns = 0;
+        int turns = 2;
         Player player1 = new Player();
         Player player2 = new Player();
         List<Node> mainNode = new List<Node> { };
@@ -68,7 +68,7 @@ namespace Moraba
 
         private void initNodeList()
         {
-
+            mainNode.Add(new Node());
         }
 
         private bool isNameTrue(string buttonName, string[] pos)
@@ -91,7 +91,7 @@ namespace Moraba
         /// <returns></returns>
         private List<List<string>> getMillOptions(Node currentNode)
         {
-            string[] name = currentNode.position;
+            string name = currentNode.position;
             return new List<List<string>> { };
         }
 
@@ -127,26 +127,33 @@ namespace Moraba
             return numMills;
         }
 
-        private void placeCow(Player player, int index)
+        private void placeCow(Player player, int index, Button but)
         {
             //Cow(string name, string row, string col, int team)
-            mainNode[index].cow = new Cow(mainNode[index].position, player.Team);
+            //if (validatePlaceInput())
+            //{
+                mainNode[index].cow = new Cow(mainNode[index].position, player.Team);
+                if (player.Team == 1) but.Background = Brushes.BurlyWood;
+                else but.Background = Brushes.DarkOrchid;
+                turns++;
+            //}
+            
         }
 
-        private void playerCheck(int index)
+        private void playerCheck(int index, Button but)
         {
             if (turns % 2 == 0)
             {
                 if (turns < 25)
                 {
-                    placeCow(player2, index);
+                    placeCow(player2, index, but);
                 }
             }
             else
             {
                 if (turns < 25)
                 {
-                    placeCow(player1, index);
+                    placeCow(player1, index, but);
                 }
             }
         }
@@ -155,7 +162,7 @@ namespace Moraba
         private void a0_Click(object sender, RoutedEventArgs e)
         {
 
-            playerCheck(0);
+            playerCheck(0, this.a0);
         }
 
         private void a3_Click(object sender, RoutedEventArgs e)
