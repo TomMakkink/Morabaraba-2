@@ -10,18 +10,18 @@ namespace Moraba
     {
         public string position;
         public bool occupied;
-        public string[] neighbours;
+        public List<string> neighbours;
         public Cow cow;
 
         public Node ()
         {
             position = "a0";
             occupied = false;
-            neighbours = new string[4];
+            neighbours = new List<string> { };
             cow = new Cow();
         }
 
-        public Node (string pos, bool isEmpty, string[] friendNode, Cow newCow)
+        public Node (string pos, bool isEmpty, List<string> friendNode, Cow newCow)
         {
             position = pos;
             occupied = isEmpty;
@@ -29,11 +29,11 @@ namespace Moraba
             cow = newCow;
         }
 
-        public Node(string pos)
+        public Node(string pos,List<string> friends)
         {
             position = pos;
             occupied = false;
-            neighbours = new string[4];
+            neighbours = friends;
             cow = new Cow();
         }
 
