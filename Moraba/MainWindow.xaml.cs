@@ -23,8 +23,8 @@ namespace Moraba
         // Global Variables 
 
         int turns = 1;
-        Player player1 = new Player();
-        Player player2 = new Player();
+        Player player1 = new Player("Player 1", 1);
+        Player player2 = new Player("Player 2", 2);
         List<Node> mainNode = new List<Node> { };
         List<List<string>> millList = new List<List<string>> { };
         bool isStartNode = true;
@@ -55,11 +55,11 @@ namespace Moraba
 
             // Initialize mainNode list 
             initNodeList();
-
+            
 
         }
 
-
+       
 
         private void quitGameButton_Click(object sender, RoutedEventArgs e)
         {
@@ -244,7 +244,7 @@ namespace Moraba
         private void changeButtonColour(Player player, Button but)
         {
             if (player.Team == 1) but.Background = Brushes.BurlyWood;
-            else but.Background = Brushes.DarkSalmon;
+            else but.Background = Brushes.DarkCyan;
         }
 
 
