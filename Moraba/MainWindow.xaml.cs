@@ -222,6 +222,17 @@ FLYING THE COWS
             return false;
         }
 
+        private bool checkCowInMill(List<string> currentMill)
+        {
+            
+            foreach (List<string> x in millList)
+            {
+                if (x.Contains(currentMill[0]) || x.Contains(currentMill[1]) || x.Contains(currentMill[2]))
+                    return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// This method will return the number of mills formed if any.
         /// </summary>
@@ -234,6 +245,12 @@ FLYING THE COWS
             for (int i = 0; i < millOptions.Count; i++) // this just goes through all the options given and either adds to the numMills and millList or does nothing.
             {
                 bool answer = checkMillCanForm(millOptions[i],player); // this will check whether this mill can be formed or not.
+                if (checkCowInMill(millOptions[i]) && answer)
+                {
+                    answer = false;
+                    millList.Add(millOptions[i]);
+                    MessageBox.Show("Cows are in a mill but cannot shoot.");
+                }
                 if (answer)
                 {
                     numMills++; // adds a +1 to the number of mills that are formed from this one node.
@@ -244,6 +261,16 @@ FLYING THE COWS
             else return false;
         }
 
+        private bool checkCowNotInMill(int index)
+        {
+            foreach (List<string> x in millList)
+            {
+                if (x.Contains(mainNode[index].position))
+                    return false;
+            }
+            return true;
+        }
+
         /// <summary>
         /// This will shoot the cow by emptying the mainNode list of the cow as well as changeing the node colour aswell
         /// </summary>
@@ -252,7 +279,7 @@ FLYING THE COWS
         /// <param name="but"></param>
         private void shootCow(int index,Player player,Button but )
         {
-            if (mainNode[index].occupied == true && mainNode[index].cow.Team != player.Team && isShooting ==true)
+            if (mainNode[index].occupied == true && mainNode[index].cow.Team != player.Team && isShooting ==true && checkCowNotInMill(index))
             {
                 mainNode[index].occupied = false;
                 mainNode[index].cow = new Cow();
@@ -260,7 +287,7 @@ FLYING THE COWS
                 isShooting = false;
             }
             else
-                MessageBox.Show("Please may you choose a node that is not your own and that is not empty.");
+                MessageBox.Show("Please choose a enemy node that is not in a mill.");
         }
 
        
@@ -305,6 +332,16 @@ FLYING THE COWS
             mainNode[index].occupied = true;
             turns++;
             isStartNode = true;
+            if (millList.Count >= 1)
+            {
+                foreach (List<string> x in millList)
+                {
+                    if (x.Contains(mainNode[index].position))
+                    {
+                        millList.Remove(x);
+                    }
+                }
+            }
             changeButtonColour(player, but);
         }
 
@@ -368,8 +405,6 @@ FLYING THE COWS
             if (isShooting) turns--;
             if (turns % 2 == 0)
             {
-                player2Arrow.Visibility = Visibility.Hidden;
-                player1Arrow.Visibility = Visibility.Visible;
                 if (isShooting)
                 {
                     
@@ -378,7 +413,7 @@ FLYING THE COWS
                 }
                 else
                 {
-                    if (turns < 25)
+                    if (turns < 10)
                     {
                         placeCow(player2, index, but);
                         player2State.Content = "State: Placing";
@@ -404,9 +439,7 @@ FLYING THE COWS
                 }
                 else
                 {
-                    player1Arrow.Visibility = Visibility.Hidden;
-                    player2Arrow.Visibility = Visibility.Visible;
-                    if (turns < 25)
+                    if (turns < 10)
                     {
                         placeCow(player1, index, but);
                         player1State.Content = "State: Placing";

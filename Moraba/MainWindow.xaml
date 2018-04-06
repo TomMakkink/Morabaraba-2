@@ -182,5 +182,6 @@
         <Button x:Name="rulesButton" Content="Rules" Visibility="Visible" Click="rulesButton_Click" Grid.Column="1" Margin="290,308,10,72" Grid.ColumnSpan="2"/>
         <Button x:Name="beginGameButton" Content="Begin Game"  Click="beginGameButton_Click" Visibility="Visible" Margin="289,258,10,122" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Button x:Name="quitGameButton" Content="Quit" HorizontalAlignment="Left" Height="30" Margin="290,361,0,0" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2" Grid.Column="1" Click="quitGameButton_Click" Visibility="Visible"/>
+        <Label Grid.ColumnSpan="2" Content="Morabaraba" HorizontalAlignment="Left" Height="37" Margin="10,4,0,0" VerticalAlignment="Top" Width="541" FontSize="18"/>
     </Grid>
 </Window>
