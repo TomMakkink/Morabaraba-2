@@ -399,63 +399,150 @@ FLYING THE COWS
             }
         }
 
+        private void player2Move(int index, Button but)
+        {
+            if (isShooting)
+            {
+
+                shootCow(index, player2, but);
+                turns++;
+            }
+            else
+            {
+                if (turns < 25)
+                {
+                    placeCow(player2, index, but);
+                    player2State.Content = "State: Placing";
+                }
+                else
+                {
+                    moveCow(player2, index, but);
+                    isGameOver(player2);
+                }
+                if (checkMills(index, player2) && isStartNode == true)
+                {
+                    MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                    player2State.Content = "Player 2: Shooting";
+                    isShooting = true;
+                }
+            }
+        }
+
+        private void player1Move(int index, Button but)
+        {
+            if (isShooting)
+            {
+                shootCow(index, player1, but);
+                turns++;
+            }
+            else
+            {
+                if (turns < 25)
+                {
+                    placeCow(player1, index, but);
+                    player1State.Content = "State: Placing";
+                }
+                else
+                {
+                    moveCow(player1, index, but);
+                    isGameOver(player2);
+                }
+                if (checkMills(index, player1) && isStartNode == true)
+                {
+                    MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                    player1State.Content = "Player 1: Shooting";
+                    isShooting = true;
+                }
+            }
+        }
+
+        private List<Cow> playerCowsOnField(Player player)
+        {
+            List<Cow> cowList = new List<Cow> { };
+            foreach (Node x in mainNode)
+            {
+                if (x.cow.Team == player.Team)
+                    cowList.Add(x.cow);
+            }
+            return cowList;
+        }
+
+        private bool isBoardFull ()
+        {
+            int total = 0; 
+            foreach (Node x in mainNode)
+            {
+                if (x.occupied) total++;
+            }
+            return total >= mainNode.Count;
+        }
+
+        private Node getNodeFromString (string nodeName)
+        {
+            foreach (Node x in mainNode)
+            {
+                if (nodeName == x.position) return x;
+            }
+            return new Node();
+        }
+
+
+        private bool checkNeighbours(string nodePos)
+        {
+            Node currentNode = getNodeFromString(nodePos);
+            if (currentNode.neighbours.Count==3)
+            {
+                Node temp1 = getNodeFromString(currentNode.neighbours[0]);
+                Node temp2 = getNodeFromString(currentNode.neighbours[1]);
+                Node temp3 = getNodeFromString(currentNode.neighbours[2]);
+                return (temp1.occupied && temp2.occupied && temp3.occupied);
+                  
+            }
+            else
+            {
+                Node temp1 = getNodeFromString(currentNode.neighbours[0]);
+                Node temp2 = getNodeFromString(currentNode.neighbours[1]);
+                Node temp3 = getNodeFromString(currentNode.neighbours[2]);
+                Node temp4 = getNodeFromString(currentNode.neighbours[3]);
+                return (temp1.occupied && temp2.occupied && temp3.occupied && temp4.occupied);
+          
+            }
+        }
+
+        private bool noAvailibleMoves(Player player, List <Cow> cowlist)
+        {
+            foreach (Cow x in cowlist)
+            {
+                if (checkNeighbours(x.Position) == false) 
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void isGameOver(Player player)
+        {
+            List<Cow> cowList = playerCowsOnField(player);
+            if (cowList.Count < 3 || isBoardFull() || noAvailibleMoves(player, cowList))
+            {
+                MessageBox.Show("The game is over! {0} Wins!", player.Name);
+            }
+        }
+
 
         private void movePlayer(int index, Button but)
         {
             if (isShooting) turns--;
             if (turns % 2 == 0)
             {
-                if (isShooting)
-                {
-                    
-                    shootCow(index, player2, but);
-                    turns++;
-                }
-                else
-                {
-                    if (turns < 10)
-                    {
-                        placeCow(player2, index, but);
-                        player2State.Content = "State: Placing";
-                    }
-                    else
-                    {
-                        moveCow(player2, index, but);
-                    }
-                    if (checkMills(index, player2) && isStartNode==true)
-                    {
-                        MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
-                        player2State.Content = "Player 2: Shooting";
-                        isShooting = true;
-                    }
-                }
+                player2Move(index, but);
             }
             else
             {
-                if (isShooting)
-                {
-                    shootCow(index, player1, but);
-                    turns++;
-                }
-                else
-                {
-                    if (turns < 10)
-                    {
-                        placeCow(player1, index, but);
-                        player1State.Content = "State: Placing";
-                    }
-                    else
-                    {
-                        moveCow(player1, index, but);
-                    }
-                    if (checkMills(index, player1) && isStartNode == true)
-                    {
-                        MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
-                        player1State.Content = "Player 1: Shooting";
-                        isShooting = true;
-                    }
-                }
+                player1Move(index, but);
             }
+        
         }
 
 
