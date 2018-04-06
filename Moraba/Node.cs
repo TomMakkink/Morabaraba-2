@@ -17,7 +17,7 @@ namespace Moraba
         {
             position = "a0";
             occupied = false;
-            neighbours = new List<string> { };
+            neighbours = new List<string>() { };
             cow = new Cow();
         }
 
@@ -29,7 +29,7 @@ namespace Moraba
             cow = newCow;
         }
 
-        public Node(string pos,List<string> friends)
+        public Node(string pos, List<string> friends)
         {
             position = pos;
             occupied = false;
