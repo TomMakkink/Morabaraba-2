@@ -133,18 +133,6 @@ FLYING THE COWS
 
         }
 
-        private bool isNameTrue(string buttonName, string[] pos)
-        {
-            string NodeName = string.Format("{0}{1}", pos[0], pos[1]);
-
-            if ((buttonName.ToLower()).CompareTo(NodeName.ToLower()) == 0)
-            {
-                return true;
-            }
-            return false;
-
-
-        }
 
         /// <summary>
         /// This method can only return the possible mills that can be made from the avalibale node.
@@ -216,7 +204,7 @@ FLYING THE COWS
         /// </summary>
         /// <param name="millOptions"></param>
         /// <returns></returns>
-        private bool checkTrue(List<string> millOptions, Player player)
+        private bool checkMillCanForm(List<string> millOptions, Player player)
         {
             Node temp1 = mainNode.Find(node => node.position == millOptions[0]);
             Node temp2 = mainNode.Find(node => node.position == millOptions[1]);
@@ -239,20 +227,21 @@ FLYING THE COWS
         /// </summary>
         /// <param name="currentNode"></param>
         /// <returns></returns>
-        private int checkMills(int index, Player player)
+        private bool checkMills(int index, Player player)
         {
             List<List<string>> millOptions = getMillOptions(index); // this will return all the mills that can be made from this node.
             int numMills = 0; // number of actual mills formed this is the value that is returned.
             for (int i = 0; i < millOptions.Count; i++) // this just goes through all the options given and either adds to the numMills and millList or does nothing.
             {
-                bool answer = checkTrue(millOptions[i],player); // this will check whether this mill can be formed or not.
+                bool answer = checkMillCanForm(millOptions[i],player); // this will check whether this mill can be formed or not.
                 if (answer)
                 {
                     numMills++; // adds a +1 to the number of mills that are formed from this one node.
                     millList.Add(millOptions[i]); // just adds the new mill to the millList.
                 }
             }
-            return numMills;
+            if (numMills > 0) return true;
+            else return false;
         }
 
         /// <summary>
@@ -266,6 +255,7 @@ FLYING THE COWS
             if (mainNode[index].occupied == true && mainNode[index].cow.Team != player.Team && isShooting ==true)
             {
                 mainNode[index].occupied = false;
+                mainNode[index].cow = new Cow();
                 but.Background = Brushes.WhiteSmoke;
                 isShooting = false;
             }
@@ -324,6 +314,7 @@ FLYING THE COWS
             {
                 tempCow = mainNode[index].cow;
                 mainNode[index].occupied = false;
+                mainNode[index].cow = new Cow();
                 isStartNode = false;
                 but.Background = Brushes.WhiteSmoke;
             }
@@ -333,7 +324,7 @@ FLYING THE COWS
             }
         }
 
-        private void finsihingCow (Player player, int index, Button but)
+        private void finishingCow (Player player, int index, Button but)
         {
             if (mainNode[index].position != tempCow.Position && (mainNode[index].occupied == false))
             {
@@ -363,34 +354,62 @@ FLYING THE COWS
             }
             else
             {
-                finsihingCow(player, index, but);
+                finishingCow(player, index, but);
             }
         }
 
 
-
         private void movePlayer(int index, Button but)
         {
+            if (isShooting) turns--;
             if (turns % 2 == 0)
             {
-                if (turns < 25)
+                playerTurn.Content = "Player 2";
+                if (isShooting)
                 {
-                    placeCow(player2, index, but);
+                    shootCow(index, player2, but);
+                    turns++;
                 }
                 else
                 {
-                    moveCow(player2, index, but);
+                    if (turns < 25)
+                    {
+                        placeCow(player2, index, but);
+                    }
+                    else
+                    {
+                        moveCow(player2, index, but);
+                    }
+                    if (checkMills(index, player2) && isStartNode==true)
+                    {
+                        MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                        isShooting = true;
+                    }
                 }
             }
             else
             {
-                if (turns < 25)
+                if (isShooting)
                 {
-                    placeCow(player1, index, but);
+                    shootCow(index, player1, but);
+                    turns++;
                 }
                 else
                 {
-                    moveCow(player2, index, but);
+                    playerTurn.Content = "Player 1";
+                    if (turns < 25)
+                    {
+                        placeCow(player1, index, but);
+                    }
+                    else
+                    {
+                        moveCow(player1, index, but);
+                    }
+                    if (checkMills(index, player1) && isStartNode == true)
+                    {
+                        MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                        isShooting = true;
+                    }
                 }
             }
         }
@@ -399,6 +418,7 @@ FLYING THE COWS
         private void a0_Click(object sender, RoutedEventArgs e)
         {
             movePlayer(0, this.a0);
+            
         }
 
         private void a3_Click(object sender, RoutedEventArgs e)

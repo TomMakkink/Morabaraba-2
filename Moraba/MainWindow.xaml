@@ -17,8 +17,18 @@
             <ColumnDefinition Width="85*"/>
         </Grid.ColumnDefinitions>
         <Canvas x:Name="battleGround" HorizontalAlignment="Left" Height="368" Margin="4,42,0,0" VerticalAlignment="Top" Width="788" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="7" Stroke="Black" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.5,0.5" Canvas.Left="40" Canvas.Top="78">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="29.764"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
             <Border BorderBrush="Black" BorderThickness="1" Height="368" Width="546">
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="325" Margin="9,32,0,0" TextWrapping="Wrap" Text="0&#xD;&#xA;&#xD;&#xA;1&#xD;&#xA;&#xD;&#xA;2&#xD;&#xA;&#xD;&#xA;3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;4&#xD;&#xA;&#xD;&#xA;5&#xD;&#xA;&#xD;&#xA;6&#xD;&#xA;" VerticalAlignment="Top" Width="25" FontSize="16" BorderThickness="0"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="325" Margin="9,32,0,0" TextWrapping="Wrap" Text="0&#xA;&#xA;1&#xA;&#xA;2&#xA;&#xA;3&#xA;&#xA;&#xA;4&#xA;&#xA;5&#xA;&#xA;6&#xA;" VerticalAlignment="Top" Width="25" FontSize="16" BorderThickness="0"/>
             </Border>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Canvas.Left="366" Canvas.Top="283">
                 <Rectangle.RenderTransform>
@@ -138,31 +148,32 @@
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="445" RenderTransformOrigin="0.5,0.5" Canvas.Left="53" Canvas.Top="37"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="119"/>
             <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Stroke="Black" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.5,0.5" Canvas.Left="180" Canvas.Top="242"/>
-            <Button x:Name="a0" Canvas.Left="36" Canvas.Top="32" Click="a0_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="a3" Canvas.Left="36" Canvas.Top="168" Click="a3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="a6" Canvas.Left="37" Canvas.Top="318" Click="a6_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="b1" Canvas.Left="106" Canvas.Top="72" Click="b1_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="b3" Canvas.Left="106" Canvas.Top="168" Click="b3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="b5" Canvas.Left="106" Canvas.Top="276" Click="b5_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="c2" Canvas.Left="173" Canvas.Top="113" Click="c2_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="c3" Canvas.Left="173" Canvas.Top="168" Click="c3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="c4" Canvas.Left="173" Canvas.Top="236" Click="c4_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="d0" Canvas.Left="276" Canvas.Top="32" Click="d0_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="d1" Canvas.Left="276" Canvas.Top="72" Click="d1_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="d2" Canvas.Left="276" Canvas.Top="113" Click="d2_Click" Height="18" Width="19" Background="White"></Button>
-                <Button x:Name="d4" Canvas.Left="276" Canvas.Top="236" Click="d4_Click" Height="18" Width="19" Background="White"></Button>
-                <Button x:Name="d5" Canvas.Left="276" Canvas.Top="276" Click="d5_Click" Height="18" Width="19" Background="White"></Button>
-                <Button x:Name="d6" Canvas.Left="276" Canvas.Top="318" Click="d6_Click" Height="18" Width="19" Background="White"></Button>
-                <Button x:Name="e2" Canvas.Left="366" Canvas.Top="113" Click="e2_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="e3" Canvas.Left="366" Canvas.Top="168" Click="e3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="e4" Canvas.Left="366" Canvas.Top="236" Click="e4_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="f1" Canvas.Left="432" Canvas.Top="72" Click="f1_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="f3" Canvas.Left="432" Canvas.Top="168" Click="f3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="f5" Canvas.Left="432" Canvas.Top="276" Click="f5_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="g0" Canvas.Left="490" Canvas.Top="32" Click="g0_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="g3" Canvas.Left="490" Canvas.Top="168" Click="g3_Click" Height="18" Width="19" Background="White"></Button>
-            <Button x:Name="g6" Canvas.Left="490" Canvas.Top="318" Click="g6_Click" Height="18" Width="19" Background="White"></Button>
+            <Button x:Name="a0" Canvas.Left="36" Canvas.Top="32" Click="a0_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="a3" Canvas.Left="36" Canvas.Top="168" Click="a3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="a6" Canvas.Left="37" Canvas.Top="318" Click="a6_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="b1" Canvas.Left="106" Canvas.Top="72" Click="b1_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="b3" Canvas.Left="106" Canvas.Top="168" Click="b3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="b5" Canvas.Left="106" Canvas.Top="276" Click="b5_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="c2" Canvas.Left="173" Canvas.Top="113" Click="c2_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="c3" Canvas.Left="173" Canvas.Top="168" Click="c3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="c4" Canvas.Left="173" Canvas.Top="236" Click="c4_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d0" Canvas.Left="276" Canvas.Top="32" Click="d0_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d1" Canvas.Left="276" Canvas.Top="72" Click="d1_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d2" Canvas.Left="276" Canvas.Top="113" Click="d2_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d4" Canvas.Left="276" Canvas.Top="236" Click="d4_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d5" Canvas.Left="276" Canvas.Top="276" Click="d5_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="d6" Canvas.Left="276" Canvas.Top="318" Click="d6_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="e2" Canvas.Left="366" Canvas.Top="113" Click="e2_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="e3" Canvas.Left="366" Canvas.Top="168" Click="e3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="e4" Canvas.Left="366" Canvas.Top="236" Click="e4_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="f1" Canvas.Left="432" Canvas.Top="72" Click="f1_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="f3" Canvas.Left="432" Canvas.Top="168" Click="f3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="f5" Canvas.Left="432" Canvas.Top="276" Click="f5_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="g0" Canvas.Left="490" Canvas.Top="32" Click="g0_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="g3" Canvas.Left="490" Canvas.Top="168" Click="g3_Click" Height="18" Width="19" Background="White"/>
+            <Button x:Name="g6" Canvas.Left="490" Canvas.Top="318" Click="g6_Click" Height="18" Width="19" Background="White"/>
             <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F            G" VerticalAlignment="Top" Width="489" BorderThickness="0" FontSize="14.667" Grid.ColumnSpan="2" Canvas.Left="40" Canvas.Top="10"/>
+            <Label x:Name="playerTurn" Content="Player 1" Height="35" Canvas.Left="587" Canvas.Top="30" Width="160"/>
         </Canvas>
         <Button x:Name="rulesButton" Content="Rules" Visibility="Visible" Click="rulesButton_Click" Grid.Column="1" Margin="290,308,10,72" Grid.ColumnSpan="2"/>
         <Button x:Name="beginGameButton" Content="Begin Game"  Click="beginGameButton_Click" Visibility="Visible" Margin="289,258,10,122" Grid.Column="1" Grid.ColumnSpan="2"/>
