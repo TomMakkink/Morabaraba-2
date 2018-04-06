@@ -330,10 +330,14 @@ FLYING THE COWS
             {
                 if (checkIsFlying(player))
                 {
+                    if (player.Team == 1) player1State.Content = "State: Flying";
+                    else player2State.Content = "State: Flying";
                     moveCow2NewPos(player, index, but);
                 }
                 else
                 {
+                    if (player.Team == 1) player1State.Content = "State: Moving";
+                    else player2State.Content = "State: Moving";
                     if (mainNode[index].neighbours.Contains(tempCow.Position))
                     {
                         moveCow2NewPos(player, index, but);
@@ -364,9 +368,11 @@ FLYING THE COWS
             if (isShooting) turns--;
             if (turns % 2 == 0)
             {
-                playerTurn.Content = "Player 2";
+                player2Arrow.Visibility = Visibility.Hidden;
+                player1Arrow.Visibility = Visibility.Visible;
                 if (isShooting)
                 {
+                    
                     shootCow(index, player2, but);
                     turns++;
                 }
@@ -375,6 +381,7 @@ FLYING THE COWS
                     if (turns < 25)
                     {
                         placeCow(player2, index, but);
+                        player2State.Content = "State: Placing";
                     }
                     else
                     {
@@ -383,6 +390,7 @@ FLYING THE COWS
                     if (checkMills(index, player2) && isStartNode==true)
                     {
                         MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                        player2State.Content = "Player 2: Shooting";
                         isShooting = true;
                     }
                 }
@@ -396,10 +404,12 @@ FLYING THE COWS
                 }
                 else
                 {
-                    playerTurn.Content = "Player 1";
+                    player1Arrow.Visibility = Visibility.Hidden;
+                    player2Arrow.Visibility = Visibility.Visible;
                     if (turns < 25)
                     {
                         placeCow(player1, index, but);
+                        player1State.Content = "State: Placing";
                     }
                     else
                     {
@@ -408,6 +418,7 @@ FLYING THE COWS
                     if (checkMills(index, player1) && isStartNode == true)
                     {
                         MessageBox.Show("A mill was formed. Choose an enemy cow to shoot.");
+                        player1State.Content = "Player 1: Shooting";
                         isShooting = true;
                     }
                 }

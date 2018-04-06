@@ -173,7 +173,11 @@
             <Button x:Name="g3" Canvas.Left="490" Canvas.Top="168" Click="g3_Click" Height="18" Width="19" Background="White"/>
             <Button x:Name="g6" Canvas.Left="490" Canvas.Top="318" Click="g6_Click" Height="18" Width="19" Background="White"/>
             <TextBox x:Name="columnNames" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="A&#x9;  B               C&#x9;                D&#x9;        E&#x9;           F            G" VerticalAlignment="Top" Width="489" BorderThickness="0" FontSize="14.667" Grid.ColumnSpan="2" Canvas.Left="40" Canvas.Top="10"/>
-            <Label x:Name="playerTurn" Content="Player 1" Height="35" Canvas.Left="587" Canvas.Top="30" Width="160"/>
+            <Label x:Name="player1Turn" Content="Player 1: Brown" Height="35" Canvas.Left="598" Canvas.Top="20" Width="179" FontSize="16"/>
+            <Label x:Name="player1State" Content="State: Placing" Height="35" Canvas.Left="598" Canvas.Top="49" Width="179" FontSize="16"/>
+            <Label x:Name="player2Turn" Content="Player 2: Cyan" Height="35" Canvas.Left="598" Canvas.Top="103" Width="179" FontSize="16"/>
+            <Label x:Name="player2State" Content="State: Placing" Height="35" Canvas.Left="598" Canvas.Top="138" Width="179" FontSize="16"/>
+            <Label x:Name="player2Arrow" Content="--&gt;" Height="35" Canvas.Left="567" Canvas.Top="103" Width="32" FontSize="16" Visibility="Hidden"/>
         </Canvas>
         <Button x:Name="rulesButton" Content="Rules" Visibility="Visible" Click="rulesButton_Click" Grid.Column="1" Margin="290,308,10,72" Grid.ColumnSpan="2"/>
         <Button x:Name="beginGameButton" Content="Begin Game"  Click="beginGameButton_Click" Visibility="Visible" Margin="289,258,10,122" Grid.Column="1" Grid.ColumnSpan="2"/>
