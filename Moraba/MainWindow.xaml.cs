@@ -27,8 +27,9 @@ namespace Moraba
         Player player2 = new Player("Player 2", 2);
         List<Node> mainNode = new List<Node> { };
         List<List<string>> millList = new List<List<string>> { };
-        bool isStartNode = true;
-        Cow tempCow = new Cow();
+        bool isStartNode = true; // this is used within the move method.
+        Cow tempCow = new Cow(); //  this is also used within in the move method to keep the cow that is being moved.
+        bool isShooting = false;
 
         public MainWindow()
         {
@@ -225,9 +226,25 @@ namespace Moraba
             return numMills;
         }
 
+        /// <summary>
+        /// This will shoot the cow by emptying the mainNode list of the cow as well as changeing the node colour aswell
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="player"></param>
+        /// <param name="but"></param>
+        private void shootCow(int index,Player player,Button but )
+        {
+            if (mainNode[index].occupied == true && mainNode[index].cow.Team != player.Team && isShooting ==true)
+            {
+                mainNode[index].occupied = false;
+                but.Background = Brushes.WhiteSmoke;
+                isShooting = false;
+            }
+            else
+                MessageBox.Show("Please may you choose a node that is not your own and that is not empty.");
+        }
 
-
-
+       
         private void placeCow(Player player, int index, Button but)
         {
             //Cow(string name, string row, string col, int team);
