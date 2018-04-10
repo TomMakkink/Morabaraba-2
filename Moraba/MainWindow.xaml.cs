@@ -271,6 +271,39 @@ FLYING THE COWS
             return true;
         }
 
+        private Cow getCowFromString (string y)
+        {
+            foreach (Node x in mainNode)
+                if (x.cow.Position == y)
+                    return x.cow;
+            return new Cow();
+        }
+
+      private bool canShoot (Player player)
+        {
+            List<Cow> tempList = new List<Cow> { };
+            foreach (Node x in mainNode)
+            {
+                if (player.Team != x.cow.Team && x.cow.Team != 0)
+                    tempList.Add(x.cow);
+            }
+            bool shoot = true;
+            foreach(List<string> x in millList)
+            {
+                if (getCowFromString(x[0]).Team != player.Team)
+                {
+                    foreach (Cow y in tempList)
+                    {
+                        if (x.Contains(y.Position))
+                            shoot = false;
+                        else
+                            shoot = true;
+                    }
+                }
+            }
+            return shoot;
+        }
+
         /// <summary>
         /// This will shoot the cow by emptying the mainNode list of the cow as well as changeing the node colour aswell
         /// </summary>
@@ -403,9 +436,17 @@ FLYING THE COWS
         {
             if (isShooting)
             {
-
-                shootCow(index, player2, but);
-                turns++;
+                if (canShoot(player2))
+                {
+                    shootCow(index, player2, but);
+                    turns++;
+                }
+                else
+                {
+                    MessageBox.Show("There is no cows to shoot next player 1 please make a move");
+                    turns++;
+                    isShooting = false;
+                }
             }
             else
             {
@@ -432,8 +473,17 @@ FLYING THE COWS
         {
             if (isShooting)
             {
-                shootCow(index, player1, but);
-                turns++;
+                if (canShoot(player1))
+                {
+                    shootCow(index, player1, but);
+                    turns++;
+                }
+                else
+                {
+                    MessageBox.Show("There are no cows to shoot player 2 make your move.");
+                    turns++;
+                    isShooting = false;
+                }
             }
             else
             {
