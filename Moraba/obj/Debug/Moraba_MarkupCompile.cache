@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 \\ict.ru.ac.za\DFS\UGHomes\g15d0548\Desktop\Morabaraba-2\Moraba\obj\Debug\
+=======
+\\ict.ru.ac.za\DFS\UGHomes\g15s5995\Desktop\Morabaraba-2\Moraba\obj\Debug\
+>>>>>>> 0946aa29e9888d8baf06d2b7291ccf6a37900a1a
 Moraba
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 \\ict.ru.ac.za\DFS\UGHomes\g15d0548\Desktop\Morabaraba-2\Moraba\App.xaml
+=======
+\\ict.ru.ac.za\DFS\UGHomes\g15s5995\Desktop\Morabaraba-2\Moraba\App.xaml
+>>>>>>> 0946aa29e9888d8baf06d2b7291ccf6a37900a1a
 11151548125
 
 8-234068538

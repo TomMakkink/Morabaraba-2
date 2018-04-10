@@ -367,18 +367,23 @@ FLYING THE COWS
             isStartNode = true;
             if (millList.Count >= 1)
             {
+                List<string> temp = new List<string> { };
+                bool canRemove = false;
                 foreach (List<string> x in millList)
                 {
                     if (x.Contains(mainNode[index].position))
                     {
-                        millList.Remove(x);
+                        temp = x;
+                        canRemove = true;
                     }
                 }
+                if (canRemove)
+                    millList.Remove(temp);
             }
             changeButtonColour(player, but);
         }
 
-        private void startingCow (Player player, int index, Button but)
+        private bool startingCow (Player player, int index, Button but)
         {
             if (mainNode[index].occupied && (mainNode[index].cow.Team == player.Team))
             {
@@ -387,10 +392,13 @@ FLYING THE COWS
                 mainNode[index].cow = new Cow();
                 isStartNode = false;
                 but.Background = Brushes.WhiteSmoke;
+                return true;
             }
             else
             {
                 MessageBox.Show("Please choose a valid node i.e.  an occupied node that is not your enemies.");
+                //startingCow(player, index, but);
+                return false;
             }
         }
 
@@ -424,7 +432,10 @@ FLYING THE COWS
         {
             if (isStartNode==true)
             {
-                startingCow(player, index, but);
+                if(!startingCow(player, index, but))
+                {
+                    return;
+                }
             }
             else
             {
@@ -565,10 +576,10 @@ FLYING THE COWS
             {
                 if (checkNeighbours(x.Position) == false) 
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private void isGameOver(Player player)
@@ -595,7 +606,7 @@ FLYING THE COWS
         
         }
 
-
+        #region buttons
         private void a0_Click(object sender, RoutedEventArgs e)
         {
             movePlayer(0, this.a0);
@@ -718,3 +729,4 @@ FLYING THE COWS
         }
     }
 }
+#endregion
